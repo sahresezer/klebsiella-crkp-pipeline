@@ -1,0 +1,4 @@
+organism: "Klebsiella pneumoniae"
+threads: 4
+min_quality: 20
+reads: "data/unknown_isolate.fastq.gz"

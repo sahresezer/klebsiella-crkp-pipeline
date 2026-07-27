@@ -1,0 +1,5 @@
+# Organism: Klebsiella pneumoniae (98.14% identity, E-value: 0.0)
+# Method: NCBI BLASTn against nt database
+# Query: read_000003 (1,089 bp)
+# Date: 27 Tem 2026 Pzt +03 12:54:07
+# Top hit: Klebsiella pneumoniae strain 18471, chromosome 1 (OZ185751.1)

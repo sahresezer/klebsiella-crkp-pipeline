@@ -1,0 +1,34 @@
+# Raw sequencing data (too large for git)
+data/
+*.fastq
+*.fastq.gz
+
+# Assembly output (large FASTA files)
+results/assembly/*.fasta
+results/assembly/*.gfa
+results/assembly/*.gv
+results/assembly/00-assembly/
+results/assembly/10-consensus/
+results/assembly/20-repeat/
+results/assembly/30-contigger/
+results/assembly/40-polishing/
+
+# assembly_info.txt IS tracked - required by scripts to distinguish
+# chromosome from plasmid contigs. Do not ignore it.
+!results/assembly/assembly_info.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Conda
+.conda/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/

@@ -1,0 +1,23 @@
+PlasmidFinder-2.0 Server - Results
+Database: Enterobacteriales
+Input: assembly.fasta
+Date accessed: 2026-07-27
+Source: https://cge.food.dtu.dk/services/PlasmidFinder/
+
+Plasmid		Identity	Query/Template length	Contig		Position in contig	Accession number
+IncFIB(K)	100		560 / 560		contig_2	9787..10346		JN233704
+IncFII(K)	100		148 / 148		contig_2	155139..155286		CP000648
+IncFII(Yp)	95.63		229 / 230		contig_1	3695..3922		CP000670
+IncI2(Delta)	98.42		316 / 316		contig_15	20499..20814		AP002527
+IncR		100		251 / 251		contig_5	10369..10619		DQ449578
+IncR		100		251 / 251		contig_6	5245..5495		DQ449578
+IncR		100		251 / 251		contig_8	3691..3941		DQ449578
+repB(R1701)	100		623 / 623		contig_7	910..1532		CP039970
+
+NOTE: contig_15 carries blaKPC-3 and is typed as IncI2(Delta) - a conjugative,
+broad-host-range replicon. This is the key infection control finding.
+
+Citation:
+Carattoli A, Zankari E, Garcia-Fernandez A, Voldby Larsen M, Lund O, Villa L,
+Aarestrup FM, Hasman H. PlasmidFinder and pMLST: in silico detection and typing
+of plasmids. Antimicrob. Agents Chemother. 2014.

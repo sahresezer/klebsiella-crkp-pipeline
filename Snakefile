@@ -1,0 +1,88 @@
+# Snakemake Workflow — Unknown Bacterial Isolate Analysis
+# Author: Sahre Hilal Sezer
+
+configfile: "config.yaml"
+
+READS = config["reads"]
+THREADS = config["threads"]
+
+ASSEMBLY = "results/assembly/assembly.fasta"
+ASSEMBLY_INFO = "results/assembly/assembly_info.txt"
+NANOSTATS = "results/qc/NanoStats.txt"
+AMR_RESULTS = "results/amr/resfinder/ResFinder_results_tab.txt"
+
+rule all:
+    input:
+        "results/qc/quast/report.txt",
+        "results/typing/mlst_result.txt",
+        "results/qc/qc_dashboard.html",
+        "results/amr/amr_summary.html",
+        "results/amr/amr_location.html",
+        "results/report/final_report.html"
+
+rule qc:
+    input:
+        READS
+    output:
+        NANOSTATS,
+        "results/qc/NanoPlot-report.html"
+    threads: THREADS
+    shell:
+        "NanoPlot --fastq {input} --outdir results/qc --threads {threads}"
+
+rule assembly:
+    input:
+        READS
+    output:
+        ASSEMBLY,
+        ASSEMBLY_INFO
+    threads: THREADS
+    shell:
+        "flye --nano-hq {input} --out-dir results/assembly --threads {threads}"
+
+rule assembly_qc:
+    input:
+        ASSEMBLY
+    output:
+        "results/qc/quast/report.txt"
+    shell:
+        "python -m quast {input} -o results/qc/quast"
+
+rule mlst:
+    input:
+        ASSEMBLY
+    output:
+        "results/typing/mlst_result.txt"
+    shell:
+        "mlst --scheme klebsiella {input} > {output}"
+
+# NOTE: BLASTn (taxonomic ID), ResFinder (AMR) and PlasmidFinder (replicon
+# typing) were run through the NCBI and CGE web services rather than locally.
+# Their outputs are committed under results/taxonomy/, results/amr/resfinder/
+# and results/plasmid/. See README.md for the exact parameters used.
+
+rule visualize:
+    input:
+        READS,
+        AMR_RESULTS,
+        ASSEMBLY_INFO,
+        NANOSTATS
+    output:
+        "results/qc/qc_dashboard.html",
+        "results/amr/amr_summary.html",
+        "results/amr/amr_location.html"
+    shell:
+        "PYTHONPATH=scripts python scripts/visualize.py"
+
+rule report:
+    input:
+        READS,
+        AMR_RESULTS,
+        ASSEMBLY_INFO,
+        NANOSTATS,
+        "results/qc/qc_dashboard.html",
+        "results/amr/amr_summary.html"
+    output:
+        "results/report/final_report.html"
+    shell:
+        "PYTHONPATH=scripts python scripts/report_generator.py"

@@ -1,0 +1,220 @@
+2026-07-27 12:32:10,559 NanoPlot 1.47.1 started with arguments Namespace(threads=4, verbose=False, store=False, raw=False, huge=False, outdir='results/qc', no_static=False, prefix='', tsv_stats=False, only_report=False, info_in_report=False, maxlength=None, minlength=None, drop_outliers=False, downsample=None, loglength=False, percentqual=False, alength=False, minqual=None, runtime_until=None, readtype='1D', barcoded=False, no_supplementary=False, color='#4CB391', colormap='Greens', format=['png'], plots=['kde', 'dot'], legacy=None, listcolors=False, listcolormaps=False, no_N50=False, N50=False, title=None, font_scale=1, dpi=300, hide_stats=False, fastq=['data/unknown_isolate.fastq.gz'], fasta=None, fastq_rich=None, fastq_minimal=None, summary=None, bam=None, ubam=None, cram=None, pickle=None, feather=None, path='results/qc/')
+2026-07-27 12:32:10,559 Python version is: 3.10.20 (main, Jun 11 2026, 15:14:28) [Clang 20.1.8 ]
+2026-07-27 12:32:31,025 Nanoget: Gathered all metrics of 260294 reads
+2026-07-27 12:32:31,110 Calculated statistics
+2026-07-27 12:32:31,111 Using sequenced read lengths for plotting.
+2026-07-27 12:32:31,114 Removed 147 artefactual reads with very short length and very high quality.
+2026-07-27 12:32:31,195 Calculated statistics
+2026-07-27 12:32:31,196 NanoPlot:  Valid color #4CB391.
+2026-07-27 12:32:31,196 NanoPlot:  Valid colormap Greens.
+2026-07-27 12:32:31,196 NanoPlot:  Creating length plots for Read length.
+2026-07-27 12:32:31,197 NanoPlot:  Using 260147 reads maximum of 210485bp.
+2026-07-27 12:32:31,267 Chromium init'ed with kwargs {}
+2026-07-27 12:32:31,268 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:31,268 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpty0gjlhy.
+2026-07-27 12:32:31,268 Opening browser.
+2026-07-27 12:32:31,268 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpc1d5bt6l.
+2026-07-27 12:32:31,268 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpc1d5bt6l
+2026-07-27 12:32:34,544 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpty0gjlhy/index.html
+2026-07-27 12:32:35,515 Getting tab from queue (has 1)
+2026-07-27 12:32:35,515 Got 104C
+2026-07-27 12:32:35,590 Reloading tab 104C before return.
+2026-07-27 12:32:35,676 Putting tab 104C back (queue size: 0).
+2026-07-27 12:32:35,676 Waiting for all cleanups to finish.
+2026-07-27 12:32:35,676 Exiting Kaleido.
+2026-07-27 12:32:35,677 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:35,677 shutil.rmtree worked.
+2026-07-27 12:32:35,677 Closing browser.
+2026-07-27 12:32:35,678 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:35,678 shutil.rmtree worked.
+2026-07-27 12:32:35,678 Closing browser.
+2026-07-27 12:32:35,678 Cancelling tasks.
+2026-07-27 12:32:35,678 Exiting Kaleido/Choreo.
+2026-07-27 12:32:35,759 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:35,760 shutil.rmtree worked.
+2026-07-27 12:32:35,760 Cancelling tasks.
+2026-07-27 12:32:35,760 Exiting Kaleido/Choreo.
+2026-07-27 12:32:35,760 Could not set DPI metadata for results/qc/WeightedHistogramReadlength.png: No module named 'PIL'
+2026-07-27 12:32:35,761 Saved results/qc/WeightedHistogramReadlength.png as png (dpi=300)
+2026-07-27 12:32:35,783 Chromium init'ed with kwargs {}
+2026-07-27 12:32:35,783 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:35,783 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpsbp1jq88.
+2026-07-27 12:32:35,783 Opening browser.
+2026-07-27 12:32:35,783 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpu4jecfdd.
+2026-07-27 12:32:35,783 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpu4jecfdd
+2026-07-27 12:32:36,140 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpsbp1jq88/index.html
+2026-07-27 12:32:36,940 Getting tab from queue (has 1)
+2026-07-27 12:32:36,940 Got 294D
+2026-07-27 12:32:37,012 Reloading tab 294D before return.
+2026-07-27 12:32:37,096 Putting tab 294D back (queue size: 0).
+2026-07-27 12:32:37,096 Waiting for all cleanups to finish.
+2026-07-27 12:32:37,096 Exiting Kaleido.
+2026-07-27 12:32:37,096 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:37,096 shutil.rmtree worked.
+2026-07-27 12:32:37,096 Closing browser.
+2026-07-27 12:32:37,097 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:37,097 shutil.rmtree worked.
+2026-07-27 12:32:37,097 Closing browser.
+2026-07-27 12:32:37,097 Cancelling tasks.
+2026-07-27 12:32:37,097 Exiting Kaleido/Choreo.
+2026-07-27 12:32:37,181 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:37,181 shutil.rmtree worked.
+2026-07-27 12:32:37,181 Cancelling tasks.
+2026-07-27 12:32:37,181 Exiting Kaleido/Choreo.
+2026-07-27 12:32:37,182 Could not set DPI metadata for results/qc/WeightedLogTransformed_HistogramReadlength.png: No module named 'PIL'
+2026-07-27 12:32:37,182 Saved results/qc/WeightedLogTransformed_HistogramReadlength.png as png (dpi=300)
+2026-07-27 12:32:37,197 Chromium init'ed with kwargs {}
+2026-07-27 12:32:37,197 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:37,197 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpltg3plhj.
+2026-07-27 12:32:37,198 Opening browser.
+2026-07-27 12:32:37,198 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmptjxo6b8g.
+2026-07-27 12:32:37,198 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmptjxo6b8g
+2026-07-27 12:32:37,571 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpltg3plhj/index.html
+2026-07-27 12:32:38,368 Getting tab from queue (has 1)
+2026-07-27 12:32:38,368 Got 404A
+2026-07-27 12:32:38,436 Reloading tab 404A before return.
+2026-07-27 12:32:38,517 Putting tab 404A back (queue size: 0).
+2026-07-27 12:32:38,517 Waiting for all cleanups to finish.
+2026-07-27 12:32:38,517 Exiting Kaleido.
+2026-07-27 12:32:38,518 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:38,518 shutil.rmtree worked.
+2026-07-27 12:32:38,518 Closing browser.
+2026-07-27 12:32:38,519 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:38,519 shutil.rmtree worked.
+2026-07-27 12:32:38,519 Closing browser.
+2026-07-27 12:32:38,519 Cancelling tasks.
+2026-07-27 12:32:38,519 Exiting Kaleido/Choreo.
+2026-07-27 12:32:38,606 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:38,606 shutil.rmtree worked.
+2026-07-27 12:32:38,606 Cancelling tasks.
+2026-07-27 12:32:38,606 Exiting Kaleido/Choreo.
+2026-07-27 12:32:38,607 Could not set DPI metadata for results/qc/Non_weightedHistogramReadlength.png: No module named 'PIL'
+2026-07-27 12:32:38,607 Saved results/qc/Non_weightedHistogramReadlength.png as png (dpi=300)
+2026-07-27 12:32:38,624 Chromium init'ed with kwargs {}
+2026-07-27 12:32:38,624 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:38,624 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpv62z_0pa.
+2026-07-27 12:32:38,624 Opening browser.
+2026-07-27 12:32:38,624 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpiqkhueag.
+2026-07-27 12:32:38,624 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpiqkhueag
+2026-07-27 12:32:38,971 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpv62z_0pa/index.html
+2026-07-27 12:32:38,996 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:38,997 shutil.rmtree worked.
+2026-07-27 12:32:38,997 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:38,997 shutil.rmtree worked.
+2026-07-27 12:32:39,772 Getting tab from queue (has 1)
+2026-07-27 12:32:39,772 Got E405
+2026-07-27 12:32:39,842 Reloading tab E405 before return.
+2026-07-27 12:32:39,923 Putting tab E405 back (queue size: 0).
+2026-07-27 12:32:39,923 Waiting for all cleanups to finish.
+2026-07-27 12:32:39,923 Exiting Kaleido.
+2026-07-27 12:32:39,923 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:39,923 shutil.rmtree worked.
+2026-07-27 12:32:39,923 Closing browser.
+2026-07-27 12:32:39,925 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:39,925 shutil.rmtree worked.
+2026-07-27 12:32:39,925 Closing browser.
+2026-07-27 12:32:39,925 Cancelling tasks.
+2026-07-27 12:32:39,925 Exiting Kaleido/Choreo.
+2026-07-27 12:32:40,063 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:40,063 shutil.rmtree worked.
+2026-07-27 12:32:40,063 Cancelling tasks.
+2026-07-27 12:32:40,063 Exiting Kaleido/Choreo.
+2026-07-27 12:32:40,064 Could not set DPI metadata for results/qc/Non_weightedLogTransformed_HistogramReadlength.png: No module named 'PIL'
+2026-07-27 12:32:40,064 Saved results/qc/Non_weightedLogTransformed_HistogramReadlength.png as png (dpi=300)
+2026-07-27 12:32:40,064 NanoPlot: Creating yield by minimal length plot for Read length.
+2026-07-27 12:32:40,154 Chromium init'ed with kwargs {}
+2026-07-27 12:32:40,154 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:40,154 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpttkbjhqk.
+2026-07-27 12:32:40,154 Opening browser.
+2026-07-27 12:32:40,155 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpr4t8xost.
+2026-07-27 12:32:40,155 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpr4t8xost
+2026-07-27 12:32:40,499 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpttkbjhqk/index.html
+2026-07-27 12:32:41,287 Getting tab from queue (has 1)
+2026-07-27 12:32:41,287 Got 7E67
+2026-07-27 12:32:42,198 Reloading tab 7E67 before return.
+2026-07-27 12:32:42,305 Putting tab 7E67 back (queue size: 0).
+2026-07-27 12:32:42,306 Waiting for all cleanups to finish.
+2026-07-27 12:32:42,306 Exiting Kaleido.
+2026-07-27 12:32:42,306 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:42,306 shutil.rmtree worked.
+2026-07-27 12:32:42,306 Closing browser.
+2026-07-27 12:32:42,307 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:42,307 shutil.rmtree worked.
+2026-07-27 12:32:42,307 Closing browser.
+2026-07-27 12:32:42,307 Cancelling tasks.
+2026-07-27 12:32:42,307 Exiting Kaleido/Choreo.
+2026-07-27 12:32:42,394 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:42,394 shutil.rmtree worked.
+2026-07-27 12:32:42,394 Cancelling tasks.
+2026-07-27 12:32:42,394 Exiting Kaleido/Choreo.
+2026-07-27 12:32:42,395 Could not set DPI metadata for results/qc/Yield_By_Length.png: No module named 'PIL'
+2026-07-27 12:32:42,395 Saved results/qc/Yield_By_Length.png as png (dpi=300)
+2026-07-27 12:32:42,396 Created length plots
+2026-07-27 12:32:42,399 NanoPlot: Creating Read lengths vs Average read quality plots using 260147 reads.
+2026-07-27 12:32:42,420 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:42,420 shutil.rmtree worked.
+2026-07-27 12:32:42,457 Chromium init'ed with kwargs {}
+2026-07-27 12:32:42,457 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:42,457 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmp7eo_87uu.
+2026-07-27 12:32:42,457 Opening browser.
+2026-07-27 12:32:42,457 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpx362efsy.
+2026-07-27 12:32:42,457 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpx362efsy
+2026-07-27 12:32:42,851 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmp7eo_87uu/index.html
+2026-07-27 12:32:43,613 Getting tab from queue (has 1)
+2026-07-27 12:32:43,613 Got A920
+2026-07-27 12:32:44,458 Reloading tab A920 before return.
+2026-07-27 12:32:44,567 Putting tab A920 back (queue size: 0).
+2026-07-27 12:32:44,567 Waiting for all cleanups to finish.
+2026-07-27 12:32:44,567 Exiting Kaleido.
+2026-07-27 12:32:44,568 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:44,568 shutil.rmtree worked.
+2026-07-27 12:32:44,568 Closing browser.
+2026-07-27 12:32:44,569 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:44,569 shutil.rmtree worked.
+2026-07-27 12:32:44,569 Closing browser.
+2026-07-27 12:32:44,569 Cancelling tasks.
+2026-07-27 12:32:44,569 Exiting Kaleido/Choreo.
+2026-07-27 12:32:44,656 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:44,657 shutil.rmtree worked.
+2026-07-27 12:32:44,657 Cancelling tasks.
+2026-07-27 12:32:44,657 Exiting Kaleido/Choreo.
+2026-07-27 12:32:44,658 Could not set DPI metadata for results/qc/LengthvsQualityScatterPlot_dot.png: No module named 'PIL'
+2026-07-27 12:32:44,658 Saved results/qc/LengthvsQualityScatterPlot_dot.png as png (dpi=300)
+2026-07-27 12:32:44,681 Chromium init'ed with kwargs {}
+2026-07-27 12:32:44,681 Found chromium path: /Users/sahra/Library/Application Support/choreographer/deps/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+2026-07-27 12:32:44,681 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmp7u_tlfmw.
+2026-07-27 12:32:44,681 Opening browser.
+2026-07-27 12:32:44,681 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:44,682 shutil.rmtree worked.
+2026-07-27 12:32:44,682 Temp directory created: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpay9_egt6.
+2026-07-27 12:32:44,682 Temporary directory at: /var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmpay9_egt6
+2026-07-27 12:32:45,008 Conforming 1 to file:///var/folders/jr/qlgnxp0d3_nb50fz_d9fqbkm0000gn/T/tmp7u_tlfmw/index.html
+2026-07-27 12:32:45,778 Getting tab from queue (has 1)
+2026-07-27 12:32:45,778 Got 0639
+2026-07-27 12:32:46,069 Reloading tab 0639 before return.
+2026-07-27 12:32:46,155 Putting tab 0639 back (queue size: 0).
+2026-07-27 12:32:46,155 Waiting for all cleanups to finish.
+2026-07-27 12:32:46,155 Exiting Kaleido.
+2026-07-27 12:32:46,155 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,155 shutil.rmtree worked.
+2026-07-27 12:32:46,156 Closing browser.
+2026-07-27 12:32:46,157 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,157 shutil.rmtree worked.
+2026-07-27 12:32:46,157 Closing browser.
+2026-07-27 12:32:46,157 Cancelling tasks.
+2026-07-27 12:32:46,157 Exiting Kaleido/Choreo.
+2026-07-27 12:32:46,243 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,243 shutil.rmtree worked.
+2026-07-27 12:32:46,243 Cancelling tasks.
+2026-07-27 12:32:46,243 Exiting Kaleido/Choreo.
+2026-07-27 12:32:46,244 Could not set DPI metadata for results/qc/LengthvsQualityScatterPlot_kde.png: No module named 'PIL'
+2026-07-27 12:32:46,244 Saved results/qc/LengthvsQualityScatterPlot_kde.png as png (dpi=300)
+2026-07-27 12:32:46,244 Created LengthvsQual plot
+2026-07-27 12:32:46,244 Writing html report.
+2026-07-27 12:32:46,254 Finished!
+2026-07-27 12:32:46,310 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,310 shutil.rmtree worked.
+2026-07-27 12:32:46,311 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,311 shutil.rmtree worked.
+2026-07-27 12:32:46,311 TemporaryDirectory.cleanup() worked.
+2026-07-27 12:32:46,311 shutil.rmtree worked.

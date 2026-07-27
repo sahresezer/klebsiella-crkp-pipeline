@@ -1,0 +1,54 @@
+/opt/anaconda3/envs/isolate_analysis/bin/quast.py results/assembly/assembly.fasta -o results/qc/quast
+
+Version: 5.2.0
+
+System information:
+  OS: macOS-26.5.2-arm64-arm-64bit (macosx)
+  Python version: 3.10.20
+  CPUs number: 8
+
+Started: 2026-07-27 14:26:25
+
+Logging to /Users/sahra/unknown_isolate/results/qc/quast/quast.log
+NOTICE: Maximum number of threads is set to 2 (use --threads option to set it manually)
+
+CWD: /Users/sahra/unknown_isolate
+Main parameters: 
+  MODE: default, threads: 2, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Contigs:
+  Pre-processing...
+  results/assembly/assembly.fasta ==> assembly
+
+2026-07-27 14:26:27
+Running Basic statistics processor...
+  Contig files: 
+    assembly
+  Calculating N50 and L50...
+    assembly, N50 = 5306291, L50 = 1, auN = 4772650.6, Total length = 5913563, GC % = 56.79, # N's per 100 kbp =  0.00
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-07-27 14:26:27
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating Icarus viewers...
+Done
+
+2026-07-27 14:26:27
+RESULTS:
+  Text versions of total report are saved to /Users/sahra/unknown_isolate/results/qc/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/sahra/unknown_isolate/results/qc/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /Users/sahra/unknown_isolate/results/qc/quast/report.html
+  Icarus (contig browser) is saved to /Users/sahra/unknown_isolate/results/qc/quast/icarus.html
+  Log is saved to /Users/sahra/unknown_isolate/results/qc/quast/quast.log
+
+Finished: 2026-07-27 14:26:27
+Elapsed time: 0:00:01.511728
+NOTICEs: 2; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
