@@ -115,8 +115,8 @@ unknown_isolate/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/unknown_isolate.git
-cd unknown_isolate
+git clone https://github.com/sahresezer/klebsiella-crkp-pipeline.git
+cd klebsiella-crkp-pipeline
 
 # Create and activate the environment
 conda env create -f environment.yml
@@ -135,12 +135,17 @@ Place your input reads at `data/unknown_isolate.fastq.gz` before running.
 snakemake --cores 4
 ```
 
-Snakemake will execute the following steps in order:
+Snakemake resolves the dependency graph and executes:
 
-1. **QC** — NanoPlot generates read length and quality statistics
-2. **Assembly** — Flye assembles the genome in `--nano-hq` mode
-3. **Visualize** — Plotly dashboards for QC and AMR results
-4. **Report** — Self-contained HTML clinical report
+1. **qc** — NanoPlot read length and quality statistics
+2. **assembly** — Flye de novo assembly in `--nano-hq` mode
+3. **assembly_qc** — QUAST assembly metrics (N50, L50, GC, gaps)
+4. **mlst** — Multi-locus sequence typing
+5. **visualize** — Plotly dashboards for QC and AMR results
+6. **report** — Self-contained HTML clinical report
+
+BLASTn, ResFinder and PlasmidFinder are not Snakemake rules because they were run
+through web services; their committed outputs are consumed by the downstream rules.
 
 ### Run individual scripts
 
@@ -204,7 +209,18 @@ Assembled with Flye v2.9.6 (`--nano-hq` mode).
 | contig_3 | 31,963 | 39x | No | Plasmid fragment |
 | contig_5 | 35,423 | 19x | No | Plasmid fragment |
 
-Total assembled size: ~5.3 Mb, consistent with reference *K. pneumoniae* genomes.
+Total assembled size: 5,913,563 bp (~5.9 Mb) across all 13 contigs, of which the
+chromosome accounts for 5,306,291 bp (~5.3 Mb) — consistent with reference
+*K. pneumoniae* genomes.
+
+**QUAST assembly quality metrics**
+
+| Metric | Value | Assessment |
+|--------|-------|------------|
+| N50 | 5,306,291 bp | Equals chromosome length |
+| L50 | 1 | One contig covers 50% of the assembly |
+| GC content | 56.79% | Matches *K. pneumoniae* reference (~57%) |
+| N's per 100 kbp | 0.00 | Gapless assembly |
 
 ### 4. Antimicrobial Resistance
 
