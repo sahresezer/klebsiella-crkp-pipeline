@@ -25,4 +25,4 @@ jobs:
 
       - name: Run unit tests
         run: |
-          PYTHONPATH=scripts pytest tests/test_pipeline.py -v
+          PYTHONPATH=code pytest tests/test_pipeline.py -v

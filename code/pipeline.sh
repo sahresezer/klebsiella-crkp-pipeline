@@ -59,10 +59,10 @@ klebsiella__abst,klebsiella_pneumo_complex__wzi
 
 # ── VISUALIZATIONS & REPORT ───────────────────
 echo "Generating visualizations..."
-PYTHONPATH=scripts python scripts/visualize.py
+PYTHONPATH=code python code/visualize.py
 
 echo "Generating HTML clinical report..."
-PYTHONPATH=scripts python scripts/report_generator.py
+PYTHONPATH=code python code/report_generator.py
 
 echo ""
 echo "Pipeline complete."

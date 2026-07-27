@@ -139,7 +139,7 @@ def plot_amr_summary(amr_path: str, output_dir: str,
 
 if __name__ == "__main__":
     import sys
-    sys.path.insert(0, "scripts")
+    sys.path.insert(0, "code")
 
     print("Generating QC visualizations...")
     analyzer = FastqAnalyzer("data/unknown_isolate.fastq.gz")

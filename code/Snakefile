@@ -72,7 +72,7 @@ rule visualize:
         "results/amr/amr_summary.html",
         "results/amr/amr_location.html"
     shell:
-        "PYTHONPATH=scripts python scripts/visualize.py"
+        "PYTHONPATH=code python code/visualize.py"
 
 rule report:
     input:
@@ -85,4 +85,4 @@ rule report:
     output:
         "results/report/final_report.html"
     shell:
-        "PYTHONPATH=scripts python scripts/report_generator.py"
+        "PYTHONPATH=code python code/report_generator.py"

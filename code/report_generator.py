@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 from datetime import date
 
-sys.path.insert(0, "scripts")
+sys.path.insert(0, "code")
 from qc_analyzer import FastqAnalyzer
 from amr_parser import AMRParser
 
@@ -196,7 +196,7 @@ def generate_report(output_path: str):
 </div>
 <div class="card" style="font-size:13px">
   <b>Independent validation:</b> a custom Python QC analyzer
-  (<code>scripts/qc_analyzer.py</code>) was run over a {qc['total_reads']:,}-read
+  (<code>code/qc_analyzer.py</code>) was run over a {qc['total_reads']:,}-read
   subset as a cross-check of the NanoPlot output, giving a read N50 of
   {qc['n50']:,} bp, mean quality Q{qc['mean_quality']}, and mean GC content
   {qc['mean_gc']}%. Mean quality is computed by averaging per-base error

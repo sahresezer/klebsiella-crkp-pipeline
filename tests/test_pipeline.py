@@ -6,7 +6,7 @@ Author: Sahre Hilal Sezer
 
 import sys
 import pytest
-sys.path.insert(0, "scripts")
+sys.path.insert(0, "code")
 
 from qc_analyzer import FastqAnalyzer, ReadMetrics
 from amr_parser import AMRParser, AMRGene

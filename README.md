@@ -65,26 +65,32 @@ openly under Limitations rather than omitted.
 ## Project Structure
 
 ```
-unknown_isolate/
-├── data/
-│   └── unknown_isolate.fastq.gz      # Raw ONT reads (not tracked in git)
-├── code/
-│   ├── pipeline.sh                   # Full analysis pipeline as shell script
-│   └── blast_query.fasta             # Query sequence used for NCBI BLASTn
-├── scripts/
+klebsiella-crkp-pipeline/
+├── findings.md                       # MAIN REPORT - clinical findings
+├── README.md                         # This file - how to run everything
+│
+├── code/                             # Every command, script and workflow used
+│   ├── Snakefile                     # End-to-end Snakemake workflow
+│   ├── pipeline.sh                   # Same pipeline as a plain shell script
 │   ├── qc_analyzer.py                # OOP FASTQ quality control analyzer
-│   ├── amr_parser.py                 # ResFinder output parser with AMR classification
+│   ├── amr_parser.py                 # ResFinder parser + AMR classification
 │   ├── visualize.py                  # Interactive Plotly dashboards
-│   └── report_generator.py           # Self-contained HTML clinical report
+│   ├── report_generator.py           # Self-contained HTML clinical report
+│   └── blast_query.fasta             # Query sequence used for NCBI BLASTn
+│
 ├── tests/
 │   └── test_pipeline.py              # pytest unit tests (16 tests)
+│
+├── data/
+│   └── unknown_isolate.fastq.gz      # Raw ONT reads (not tracked in git)
+│
 ├── results/
 │   ├── qc/
 │   │   ├── NanoPlot-report.html      # ONT read quality report
 │   │   ├── NanoStats.txt             # Read statistics
 │   │   ├── qc_dashboard.html         # Interactive QC dashboard
 │   │   └── quast/                    # Assembly quality metrics
-│   ├── assembly/                     # Flye assembly (FASTA + assembly_info.txt)
+│   ├── assembly/                     # Flye assembly (assembly_info.txt tracked)
 │   ├── taxonomy/
 │   │   └── blast_result.txt          # NCBI BLASTn species identification
 │   ├── typing/
@@ -95,16 +101,14 @@ unknown_isolate/
 │   ├── amr/
 │   │   ├── resfinder/                # Raw ResFinder output
 │   │   ├── amr_summary.html          # Interactive resistance gene chart
-│   │   ├── amr_location.html         # Plasmid vs chromosome pie chart
-│   │   └── findings.md               # Full clinical findings report
+│   │   └── amr_location.html         # Plasmid vs chromosome pie chart
 │   └── report/
-│       └── final_report.html         # Self-contained clinical HTML report
+│       └── final_report.html         # Formatted clinical report (HTML)
+│
 ├── .github/workflows/ci.yml          # GitHub Actions CI (runs tests on push)
-├── Snakefile                         # End-to-end Snakemake workflow
 ├── config.yaml                       # Pipeline configuration
 ├── environment.yml                   # Conda environment with pinned versions
-├── LICENSE                           # MIT License
-└── README.md
+└── LICENSE                           # MIT License
 ```
 
 ---
@@ -132,7 +136,13 @@ Place your input reads at `data/unknown_isolate.fastq.gz` before running.
 ### Run the full pipeline
 
 ```bash
-snakemake --cores 4
+snakemake -s code/Snakefile --cores 4
+```
+
+Or run the equivalent plain shell script:
+
+```bash
+bash code/pipeline.sh
 ```
 
 Snakemake resolves the dependency graph and executes:
@@ -151,16 +161,16 @@ through web services; their committed outputs are consumed by the downstream rul
 
 ```bash
 # Quality control
-PYTHONPATH=scripts python scripts/qc_analyzer.py data/unknown_isolate.fastq.gz
+PYTHONPATH=code python code/qc_analyzer.py data/unknown_isolate.fastq.gz
 
 # AMR parsing (requires ResFinder output)
-PYTHONPATH=scripts python scripts/amr_parser.py results/amr/resfinder/ResFinder_results_tab.txt
+PYTHONPATH=code python code/amr_parser.py results/amr/resfinder/ResFinder_results_tab.txt
 
 # Generate interactive visualizations
-PYTHONPATH=scripts python scripts/visualize.py
+PYTHONPATH=code python code/visualize.py
 
 # Generate HTML clinical report
-PYTHONPATH=scripts python scripts/report_generator.py
+PYTHONPATH=code python code/report_generator.py
 ```
 
 ---
@@ -251,8 +261,8 @@ resistance poses a horizontal gene transfer risk to other bacterial species.
 Unit tests cover the QC analyzer, AMR gene classification, and parser logic.
 
 ```bash
-cd unknown_isolate
-PYTHONPATH=scripts pytest tests/test_pipeline.py -v
+cd klebsiella-crkp-pipeline
+PYTHONPATH=code pytest tests/test_pipeline.py -v
 ```
 
 ```

@@ -26,6 +26,9 @@ __pycache__/
 # Conda
 .conda/
 
+# Snakemake
+.snakemake/
+
 # macOS
 .DS_Store
 
